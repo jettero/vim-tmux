@@ -18,5 +18,5 @@ by [Tom Ryder][4].
 [1]: https://github.com/zaiste/tmux.vim
 [2]: http://tmux.svn.sourceforge.net/viewvc/tmux/trunk/examples/tmux.vim?revision=2783&view=markup
 [3]: https://github.com/tejr/dotfiles
-[4]: http://www.sanctum.geek.nz/about/tom-ryder
+[4]: http://sanctum.geek.nz/
 
