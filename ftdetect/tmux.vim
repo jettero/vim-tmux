@@ -1,1 +1,1 @@
-autocmd BufNewFile,BufRead {.,}tmux.conf{.*,} setlocal filetype=tmux
+autocmd BufNewFile,BufRead {.,}{local,}tmux*.conf{.*,} setlocal filetype=tmux
