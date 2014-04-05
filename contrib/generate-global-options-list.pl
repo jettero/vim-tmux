@@ -3,17 +3,16 @@
 use strict;
 use warnings;
 
-my $switch = "-g";
-   $switch .= "w" if $0 =~ m/window/;
-
-open my $in, '-|', qw(tmux show-options), $switch or die $!;
-
 my @options;
-while(<$in>) {
-    chomp;
+for my $o ($0 =~ m/window/ ? qw(-gw): qw(-g -gs)) {
+    open my $in, '-|', qw(tmux show-options), $o or die $!;
 
-    my @F = split " ";
-    push @options, $F[0] if @F;
+    while(<$in>) {
+        chomp;
+
+        my @F = split " ";
+        push @options, $F[0] if @F;
+    }
 }
 
 my $group  = $0 =~ m/window/ ? "tmuxOptsSetw" : "tmuxOptsSet";
