@@ -15,6 +15,8 @@ while(<$in>) {
     push @commands, $1 if @F >= 2 and $F[1] =~ m/\(([^)]+)\)/;
 }
 
+@commands = sort @commands;
+
 print "syn keyword tmuxCmds\n";
 while( @commands ) {
     my $line = "\t\\";

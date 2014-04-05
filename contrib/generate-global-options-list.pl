@@ -15,6 +15,8 @@ for my $o ($0 =~ m/window/ ? qw(-gw): qw(-g -gs)) {
     }
 }
 
+@options = sort @options;
+
 my $group  = $0 =~ m/window/ ? "tmuxOptsSetw" : "tmuxOptsSet";
 print "syn keyword $group\n";
 while( @options ) {
