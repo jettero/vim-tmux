@@ -19,41 +19,42 @@ syn keyword tmuxBoolean	off on
 " nmap gx :exe "r!" . substitute(getline('.'), '^[ ' . printf(&cms, '') . "]*", '', '')<cr>
 " perl contrib/generate-commands-list.pl
 syn keyword tmuxCmds
-	\ attach-session attach bind-key bind break-pane breakp capture-pane capturep
+	\ attach attach-session bind bind-key break-pane breakp capture-pane capturep
 	\ choose-buffer choose-client choose-list choose-session choose-tree
-	\ choose-window clear-history clearhist clock-mode command-prompt
-	\ confirm-before confirm copy-mode delete-buffer deleteb detach-client detach
-	\ display-message display display-panes displayp find-window findw has-session
-	\ has if-shell if join-pane joinp kill-pane killp kill-server kill-session
-	\ kill-window killw last-pane lastp last-window last link-window linkw
-	\ list-buffers lsb list-clients lsc list-commands lscm list-keys lsk
-	\ list-panes lsp list-sessions ls list-windows lsw load-buffer loadb
-	\ lock-client lockc lock-server lock lock-session locks move-pane movep
-	\ move-window movew new-session new new-window neww next-layout nextl
-	\ next-window next paste-buffer pasteb pipe-pane pipep previous-layout prevl
-	\ previous-window prev refresh-client refresh rename-session rename
-	\ rename-window renamew resize-pane resizep respawn-pane respawnp
-	\ respawn-window respawnw rotate-window rotatew run-shell run save-buffer
-	\ saveb select-layout selectl select-pane selectp select-window selectw
-	\ send-keys send send-prefix server-info info set-buffer setb set-environment
-	\ setenv set-option set set-window-option setw show-buffer showb
-	\ show-environment showenv show-messages showmsgs show-options show
-	\ show-window-options showw source-file source split-window splitw
-	\ start-server start suspend-client suspendc swap-pane swapp swap-window swapw
-	\ switch-client switchc unbind-key unbind unlink-window unlinkw wait-for wait
+	\ choose-window clear-history clearhist clock-mode command-prompt confirm
+	\ confirm-before copy-mode delete-buffer deleteb detach detach-client display
+	\ display-message display-panes displayp find-window findw has has-session if
+	\ if-shell info join-pane joinp kill-pane kill-server kill-session kill-window
+	\ killp killw last last-pane last-window lastp link-window linkw list-buffers
+	\ list-clients list-commands list-keys list-panes list-sessions list-windows
+	\ load-buffer loadb lock lock-client lock-server lock-session lockc locks ls
+	\ lsb lsc lscm lsk lsp lsw move-pane move-window movep movew new new-session
+	\ new-window neww next next-layout next-window nextl paste-buffer pasteb
+	\ pipe-pane pipep prev previous-layout previous-window prevl refresh
+	\ refresh-client rename rename-session rename-window renamew resize-pane
+	\ resizep respawn-pane respawn-window respawnp respawnw rotate-window rotatew
+	\ run run-shell save-buffer saveb select-layout select-pane select-window
+	\ selectl selectp selectw send send-keys send-prefix server-info set
+	\ set-buffer set-environment set-option set-window-option setb setenv setw
+	\ show show-buffer show-environment show-messages show-options
+	\ show-window-options showb showenv showmsgs showw source source-file
+	\ split-window splitw start start-server suspend-client suspendc swap-pane
+	\ swap-window swapp swapw switch-client switchc unbind unbind-key
+	\ unlink-window unlinkw wait wait-for
 
 " perl contrib/generate-global-options-list.pl
 syn keyword tmuxOptsSet
-	\ assume-paste-time base-index bell-action bell-on-alert default-command
-	\ default-shell default-terminal destroy-unattached detach-on-destroy
-	\ display-panes-active-colour display-panes-colour display-panes-time
-	\ display-time history-limit lock-after-time lock-command lock-server
-	\ message-attr message-bg message-command-attr message-command-bg
-	\ message-command-fg message-command-style message-fg message-limit
-	\ message-style mouse-resize-pane mouse-select-pane mouse-select-window
-	\ mouse-utf8 pane-active-border-bg pane-active-border-fg
-	\ pane-active-border-style pane-border-bg pane-border-fg pane-border-style
-	\ prefix prefix2 renumber-windows repeat-time set-remain-on-exit set-titles
+	\ assume-paste-time base-index bell-action bell-on-alert buffer-limit
+	\ default-command default-shell default-terminal destroy-unattached
+	\ detach-on-destroy display-panes-active-colour display-panes-colour
+	\ display-panes-time display-time escape-time exit-unattached focus-events
+	\ history-limit lock-after-time lock-command lock-server message-attr
+	\ message-bg message-command-attr message-command-bg message-command-fg
+	\ message-command-style message-fg message-limit message-style
+	\ mouse-resize-pane mouse-select-pane mouse-select-window mouse-utf8
+	\ pane-active-border-bg pane-active-border-fg pane-active-border-style
+	\ pane-border-bg pane-border-fg pane-border-style prefix prefix2 quiet
+	\ renumber-windows repeat-time set-clipboard set-remain-on-exit set-titles
 	\ set-titles-string status status-attr status-bg status-fg status-interval
 	\ status-justify status-keys status-left status-left-attr status-left-bg
 	\ status-left-fg status-left-length status-left-style status-position
@@ -65,7 +66,7 @@ syn keyword tmuxOptsSet
 " perl contrib/generate-window-options-list.pl
 syn keyword tmuxOptsSetw
 	\ aggressive-resize allow-rename alternate-screen automatic-rename
-	\ automatic-rename-format c0-change-trigger c0-change-interval
+	\ automatic-rename-format c0-change-interval c0-change-trigger
 	\ clock-mode-colour clock-mode-style force-height force-width main-pane-height
 	\ main-pane-width mode-attr mode-bg mode-fg mode-keys mode-mouse mode-style
 	\ monitor-activity monitor-content monitor-silence other-pane-height
