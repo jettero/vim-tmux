@@ -21,8 +21,7 @@ syn keyword tmuxCmds
 	\ kill-session lsc list-clients lscm list-commands ls list-sessions
 	\ lockc lock-client locks lock-session new[-session] refresh[-client]
 	\ rename[-session] showmsgs show-messages source[-file] start[-server]
-	\ suspendc suspend-client switchc switch-client
-	\ copy-mode
+	\ suspendc suspend-client switchc switch-client copy-mode
 	\ breakp break-pane capturep capture-pane choose-client choose-session
 	\ choose-tree choose-window displayp display-panes findw find-window
 	\ joinp join-pane killp kill-pane killw kill-window lastp last-pane
@@ -35,8 +34,7 @@ syn keyword tmuxCmds
 	\ swap-pane swapw swap-window unlinkw unlink-window
 	\ bind[-key] lsk list-keys send[-keys] send-prefix unbind[-key]
 	\ set[-option] setw set-window-option show[-options] showw
-	\ show-window-options
-	\ setenv set-environment showenv show-environment
+	\ show-window-options setenv set-environment showenv show-environment
 	\ command-prompt confirm[-before] display[-message]
 	\ choose-buffer clearhist clear-history deleteb delete-buffer lsb
 	\ list-buffers loadb load-buffer pasteb paste-buffer saveb save-buffer
@@ -52,13 +50,12 @@ syn keyword tmuxOptsSet
 	\ lock-after-time lock-command lock-server message-[command-]attr
 	\ message-[command-]bg message-[command-]fg message-limit
 	\ mouse-resize-pane mouse-select-pane mouse-select-window mouse-utf8
-	\ pane-[active-]border-bg pane-[active-]border-fg prefix prefix2
+	\ pane-[active-]border-style prefix prefix2
 	\ renumber-windows repeat-time set-remain-on-exit set-titles
-	\ set-titles-string status status-attr status-bg status-fg
+	\ set-titles-string status status-style
 	\ status-interval status-justify status-keys status-left
-	\ status-left-attr status-left-bg status-left-fg status-left-length
-	\ status-position status-right status-right-attr status-right-bg
-	\ status-right-fg status-right-length status-utf8 terminal-overrides
+	\ status-left-style status-left-length status-position status-right
+	\ status-right-style status-right-length status-utf8 terminal-overrides
 	\ update-environment visual-activity visual-bell visual-content
 	\ visual-silence word-separators
 
@@ -66,14 +63,11 @@ syn keyword tmuxOptsSetw
 	\ aggressive-resize alternate-screen automatic-rename
 	\ c0-change-interval c0-change-trigger clock-mode-colour
 	\ clock-mode-style force-height force-width layout-history-limit
-	\ main-pane-height main-pane-width mode-attr mode-bg mode-fg move-keys
+	\ main-pane-height main-pane-width mode-style move-keys
 	\ mode-mouse monitor-activity monitor-content monitor-silence
 	\ other-pane-height other-pane-width pane-base-index remain-on-exit
-	\ synchronize-panes utf8 window-status-bell-attr window-status-bell-bg
-	\ window-status-bell-fg window-status-content-attr
-	\ window-status-content-bg window-status-content-fg
-	\ window-status-activity-attr window-status-activity-bg
-	\ window-status-activity-fg window-status-attr
+	\ synchronize-panes utf8 window-status-bell-style
+	\ window-status-content-style window-status-activity-style
 	\ window-status-[current-]attr window-status-[current-]bg
 	\ window-status-[current-]fg window-status-[current-]format
 	\ window-status-separator xterm-keys wrap-search
